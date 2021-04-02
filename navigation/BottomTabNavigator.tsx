@@ -5,7 +5,8 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import HomeScreen from '../screens/HomeScreen/HomeScreen';
+import HomeScreen from '../screens/HomeScreen';
+import MovieDetailsScreen from '../screens/MovieDetailsScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { BottomTabParamList, HomeScreenParamList, TabTwoParamList } from '../types';
 
@@ -32,14 +33,14 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <MaterialIcons name="video-library" size={24} color={color} />,
         }}
       />
-            <BottomTab.Screen
+      <BottomTab.Screen
         name="Search"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => <Ionicons name="search" size={24} color={color} />,
         }}
       />
-            <BottomTab.Screen
+      <BottomTab.Screen
         name="Downloads"
         component={TabTwoNavigator}
         options={{
@@ -66,7 +67,15 @@ function TabOneNavigator() {
       <HomeStack.Screen
         name="HomeScreen"
         component={HomeScreen}
-        options={{ headerShown: false}}
+        options={{
+          headerShown: false,
+          headerTitle: ' ',
+        }}
+      />
+      <HomeStack.Screen
+        name="MovieDetailsScreen"
+        component={MovieDetailsScreen}
+        options={{ title: '',}}
       />
     </HomeStack.Navigator>
   );
