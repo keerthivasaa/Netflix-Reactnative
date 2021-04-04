@@ -34,7 +34,7 @@ const HomeCategory = (props: HomeCategoryProps) => {
                     </Pressable>
                     )}
                     horizontal
-                    showsHorizontalScrollIndicator = {true}
+                    showsHorizontalScrollIndicator = {false}
                 />
             </View>
         </>

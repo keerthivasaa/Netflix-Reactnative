@@ -12,6 +12,7 @@ const HomeScreen = () => {
           data={categories.items}
           renderItem= {({ item }) => (<HomeCategory category={item} />) }
           showsVerticalScrollIndicator = {false}
+          
         />
       </View>
     </>
